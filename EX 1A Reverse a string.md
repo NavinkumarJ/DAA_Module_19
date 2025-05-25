@@ -1,40 +1,46 @@
-# EX 1A Reverse a String
-## DATE: 
 
+# EX 1A Reverse a String
+## DATE: 18/02/25
 ## AIM:
 To write a program to create a recursive function to reverse a string.
 
 ## Algorithm
-1.Take input string s from the user.
 
-2.If the length of s is 0, return s.
+1. Start
 
-3.Otherwise, get the last character of the string s[-1].
+2. If the length of s is less than or equal to 1, then: Return s
 
-4.Recursively call the function on the substring excluding the last character s[:-1].
+3. Otherwise: Call Reverse_String(s[1:]) (i.e., the substring from the second character to the end)
 
-5.Concatenate the last character with the result of the recursive call and return it.
+4. Concatenate the result with the first character s[0]
+
+5. Return the concatenated result.
+
+6. End
 
 ## Program:
-```python
+
 Program to implement Reverse a String
+
 Developed by: NAVIN KUMAR J
+
 Register Number: 212222240071
+```PY
 def reverse_string(s):
-    if len(s) == 0:  
+   
+    if len(s) <= 1:
         return s
-    else:
-        return s[-1] + reverse_string(s[:-1]) 
+    
+    return reverse_string(s[1:]) + s[0]
+
 
 input_string = input()
-reversed_string = reverse_string(input_string)
-print(reversed_string)
-
+print(reverse_string(input_string))
 ```
 
 ## Output:
 
-![WhatsApp Image 2025-04-29 at 13 38 59_630857d8](https://github.com/user-attachments/assets/aa09af96-db7f-4314-a405-88a1af65f348)
+![image](https://github.com/user-attachments/assets/940964c8-56f9-497b-ba6e-9762429f4f76)
 
 
 ## Result:
